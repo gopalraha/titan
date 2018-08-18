@@ -1,0 +1,37 @@
+
+<!-- Month Start  -->
+<div class="themeix-month-area section-spacing bgcolor4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                    <h2>Templates of Month</h2>
+                    <p>Get access to all our Ghost themes for the price of one. A new theme each month.ortor, diam donec a eget, elit id tellus eu eget dignissim vitae</p>
+                </div>
+            </div>
+        </div>
+        {% for offer_info in site.data.monthly_offer %}
+        <div class="row">
+            <div class="col-lg-5 col-md-12">
+                <div class="month-layout d-flex align-items-center">
+                    <img class="image-fluid" src="/assets/image/{{offer_info.screenshot}}" alt="{{offer_info.template_name}}"/>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="month-content-before">
+                    <div class="month-content-box box-style1">
+                        <h3>{{offer_info.template_name}}</h3>
+                        <div class="date">{{offer_info.published_date}}</div>
+                        <p>{{offer_info.template_description}}</p>
+                        <div class="month-button-ptn">
+                            <a href="{{offer_info.demo_link}}" class="btn  button-style2 button-color3" data-text="live demo"><span>live demo</span></a>
+                            <a href="{{offer_info.download_link}}" class="btn  button-style2 button-color2" data-text="download"><span>download</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Month End  -->

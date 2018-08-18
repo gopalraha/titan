@@ -1,0 +1,41 @@
+
+<!-- Latest Start  -->
+<div class="themeix-latest-area section-spacing bgcolor1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title text-center">
+                  <h2>Latest Templates</h2>
+                  <p>Get access to all our Ghost themes for the price of one. A new theme each month. ortor, diam donec a eget, elit id tellus <a href="#">total 589+ theme</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           {% for templates in site.templates limit:4 %}
+            <div class="col-md-6">
+                <div class="latest-box box-style1 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="latest-template" style="background:url({{templates.thumbnail}}) no-repeat">
+                        <div class="latest-hover d-flex align-items-center justify-content-center">
+                            <div class="latest-hover-button text-center">
+                                <a href="{{templates.demo_link}}" class="btn  button-style3 button-color2" data-text="live demo"><span>live demo</span></a>
+                                <a href="{{templates.purchase_link}}" class="btn  button-style3 button-color1" data-text="download"><span>download</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3><a href="{{templates.url}}">{{templates.name}}</a></h3>
+                    <div class="date">{{templates.published_date | date_to_long_string }}</div>
+                    <p>{{templates.description | strip_html | truncatewords: 18 }}</p>
+                </div>
+            </div>
+           {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latest-template-btn text-center">
+                    <a href="/templates" class="btn  button-style1 button-color1" data-text="browse all themes"><span>browse all themes</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest End  -->
